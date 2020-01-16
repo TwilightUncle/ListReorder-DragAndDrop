@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8"> 
+        <title>Demo</title>
+        <style>
+            ul {
+                padding: 40px;
+                margin: 40px;
+                border: 5px solid #000;
+                text-decoration: none;
+            }
+
+            ul > li {
+                background-color: aqua;
+                padding: 10px;
+            }
+        </style>
+
+        <script src="./lib/functions.js"></script>
+        <script>
+            
+            let list_1 = ReorderListDragAndDrop({
+                target: 'list-1',
+                direction: 'vertical',
+                margin: 5,
+            });
+
+        </script>
+    </head>
+    <body>
+        <p>ドラッグアンドドロップで移動させてね</p>
+        <ul class="list-1">
+            <li><a href="javascript:void(0);"><span>1</span> hogehoge</a></li>
+            <li><a href="javascript:void(0);"><span>2</span> piyopiyo</a></li>
+            <li><a href="javascript:void(0);"><span>3</span> |o^）┐</a></li>
+            <li><a href="javascript:void(0);"><span>4</span> haskell</a></li>
+            <li><a href="javascript:void(0);"><span>5</span> php</a></li>
+            <li><a href="javascript:void(0);"><span>6</span> C++</a></li>
+            <li><a href="javascript:void(0);"><span>7</span> (´・ω・`)</a></li>
+            <li><a href="javascript:void(0);"><span>8</span> ＼(^o^)／</a></li>
+        </ul>
+    </body>
+</html>
