@@ -8,22 +8,47 @@
                 padding: 40px;
                 margin: 40px;
                 border: 5px solid #000;
-                text-decoration: none;
+                list-style: none;
             }
 
             ul > li {
                 background-color: aqua;
                 padding: 10px;
             }
+
+            .num-0 {color: #000;}
+            .num-1 {color: #f00;}
+            .num-2 {color: #888;}
+            .num-3 {color: #00f;}
+            .num-4 {color: #ff0;}
+            .num-5 {color: #88f;}
+            .num-6 {color: #f0f;}
+            .num-7 {color: #f88;}
         </style>
 
         <script src="./lib/functions.js"></script>
         <script>
             
+            // 変数に保存することで後から要素の追加や除外を行うことができます
             let list_1 = ReorderListDragAndDrop({
                 target: 'list-1',
                 direction: 'vertical',
                 margin: 5,
+
+                // 要素を整列させる処理に差し込むコールバックです
+                // リストの番号を変更します
+                callbackReOrder: (element, index) => {
+                    let span = element.querySelector('a > span');
+                    span.textContent = String(index);
+                    span.className = 'num-' + index;
+                },
+            });
+
+            // 横バージョン
+            let list_2 = ReorderListDragAndDrop({
+                target: 'list-2',
+                direction: 'horizontal',
+                margin: 10
             });
 
         </script>
@@ -31,14 +56,23 @@
     <body>
         <p>ドラッグアンドドロップで移動させてね</p>
         <ul class="list-1">
-            <li><a href="javascript:void(0);"><span>1</span> hogehoge</a></li>
-            <li><a href="javascript:void(0);"><span>2</span> piyopiyo</a></li>
-            <li><a href="javascript:void(0);"><span>3</span> |o^）┐</a></li>
-            <li><a href="javascript:void(0);"><span>4</span> haskell</a></li>
-            <li><a href="javascript:void(0);"><span>5</span> php</a></li>
-            <li><a href="javascript:void(0);"><span>6</span> C++</a></li>
-            <li><a href="javascript:void(0);"><span>7</span> (´・ω・`)</a></li>
-            <li><a href="javascript:void(0);"><span>8</span> ＼(^o^)／</a></li>
+            <li><a href="javascript:void(0);"><span class="num-0">1</span> hogehoge</a></li>
+            <li><a href="javascript:void(0);"><span class="num-1">2</span> piyopiyo</a></li>
+            <li><a href="javascript:void(0);"><span class="num-2">3</span> |o^）┐</a></li>
+            <li><a href="javascript:void(0);"><span class="num-3">4</span> haskell</a></li>
+            <li><a href="javascript:void(0);"><span class="num-4">5</span> php</a></li>
+            <li><a href="javascript:void(0);"><span class="num-5">6</span> C++</a></li>
+            <li><a href="javascript:void(0);"><span class="num-6">7</span> (´・ω・`)</a></li>
+            <li><a href="javascript:void(0);"><span class="num-7">8</span> ＼(^o^)／</a></li>
+        </ul>
+
+        <p>横バージョン</p>
+        <ul class="list-2">
+            <li><a href="javascript:void(0);">a</a></li>
+            <li><a href="javascript:void(0);">b</a></li>
+            <li><a href="javascript:void(0);">c</a></li>
+            <li><a href="javascript:void(0);">d</a></li>
+            <li><a href="javascript:void(0);">e</a></li>
         </ul>
     </body>
 </html>
