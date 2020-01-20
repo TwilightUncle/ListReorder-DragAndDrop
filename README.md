@@ -3,6 +3,21 @@
 ListReorder-DragAndDrop is a list sorting function that can be operated by drag and drop with JavaScript.
 ## Demo
 ![demo](./demo.gif)
+## Requirement
+* ECMAScript 2015 or later compatible browser
+## Usage
+Clone the source code and open "index.html".
+```bush
+git clone https://github.com/TwilightUncle/ListReorder-DragAndDrop.git
+```
+## note
+Operation has been confirmed only on Microsoft Edge.
+## Author
+* TwilightUncle
+## License
+ListReorder-DragAndDrop is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
+
+Thanks for watching.
 ## Constructor arguments
 
 |Property|type|default|Required|Details|
@@ -32,7 +47,16 @@ ___
 ### 概要
 練習がてらリスト要素の並べ替え機能をJavaScriptで作りました。
 drag and dropで操作できます。
-使い方はindex.htmlを参照願います。
+### 動作環境
+* おそらくECMAScript 2015 以降対応ブラウザ
+### 使い方
+以下のコマンドでcloneしてください。
+index.htmlを開けばデモが表示されます。
+```bush
+git clone https://github.com/TwilightUncle/ListReorder-DragAndDrop.git
+```
+### note
+動作確認はMicrosoft Edge のみで行っています。怠慢ですね。
 ### コンストラクタの引数について
 下記テーブル内容のオブジェクトを渡します。
 
